@@ -192,29 +192,13 @@ union select 1,table_name,null,null,5 from information_schema.tables where table
 The url once executed will  retrieve table names from the “owasp 10” database.
 ##Extracting sensitive data such as passwords 
 
-When the attacker knows table names, he needs to discover what the column names are to extract data.
-
-In MySQL, the table “information_schema.columns” gives data about columns in tables. One of the most useful columns to extract is called “column_name.”
-![Alt Text](ex08/24.png)
-Ex: (union select 1,colunm_name,null,null,5 from information_schema.columns where table_name = ‘accounts’).
-
 Here we are trying to extract column names from the “accounts” table.
 
 The column names of the accounts is displayed below for the following url:
 
-
 Once we discovered all available column names, we can extract information from them by just adding those column names in our query sentence.
-
-Ex: (union select 1,username,password,is_admin,5 from accounts).
-## Reading and writing files on the web-server
-We can use the “LOAD_FILE()” operator to peruse the contents of any file contained within the web-server. We will typically check for the “/etc/password” file to see if we get lucky and scoop usernames and passwords to possible use in brute force attacks later.
-
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
-
-
-##  OUTPUT
-
-<img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/bac2f696-1ece-4ea5-a5fa-51ceab377b9c" />
+![Alt Text](ex08/24.png)
 
 ## RESULT:
 The SQL Injection vulnerability is successfully exploited using the Multidae web application in Metasploitable2.
