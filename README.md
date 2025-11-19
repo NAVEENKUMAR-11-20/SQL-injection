@@ -192,7 +192,7 @@ The url once executed will  retrieve table names from the “owasp 10” databas
 When the attacker knows table names, he needs to discover what the column names are to extract data.
 
 In MySQL, the table “information_schema.columns” gives data about columns in tables. One of the most useful columns to extract is called “column_name.”
-
+![Alt Text](ex08/24.png)
 Ex: (union select 1,colunm_name,null,null,5 from information_schema.columns where table_name = ‘accounts’).
 
 Here we are trying to extract column names from the “accounts” table.
@@ -210,7 +210,8 @@ Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
 
 ##  OUTPUT
-![Alt Text](ex08/24.png)
+
+<img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/bac2f696-1ece-4ea5-a5fa-51ceab377b9c" />
 
 ## RESULT:
 The SQL Injection vulnerability is successfully exploited using the Multidae web application in Metasploitable2.
