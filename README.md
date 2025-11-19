@@ -79,7 +79,8 @@ Once nano opens config.inc file, look for the line $dbname = ‘metasploit’ as
 Replace ‘metasploit’ with ‘owasp10’ and make sure the lines end with semicolon ; as shown in Figure
 ##  OUTPUT
 
-![Alt Text](ex08/10.png)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/123a8f85-ed69-400f-a97f-5483362e2244" />
+
 
 
 Save and exit the config.inc
@@ -88,7 +89,8 @@ Restart the Apache server
 To restart Apache, type the following command in the terminal. Alternatively, you can just reboot Metasploitalbe 2 VM.
 sudo /etc/init.d/apache2 reload
 ##  OUTPUT
-![Alt Text](ex08/11.png)
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7c58eb89-492a-406c-aa54-522a51c5bbd5" />
+
 
 
 
@@ -154,6 +156,7 @@ When we ordered by 5, it worked and displayed some information. It means there a
 
  As it is having 5 columns the query worked fine and it provides the correct result
 ##  OUTPUT
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b099eb25-0a24-46f3-a7b1-94c74459b95b" />
 
 
 ![Alt Text](ex08/21.png)
